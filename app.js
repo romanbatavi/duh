@@ -4,7 +4,7 @@ function prayerTimes(latitude, longitude){
     .then(function(response){
         let date = new Date();
         let today = date.getDate() -1 ;
-
+        //ini belum kepake
         //console.log(response.data[today]);
     });
 }
