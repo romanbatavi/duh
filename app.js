@@ -27,8 +27,9 @@ function success(position){
     prayerTimes(position.coords.latitude, position.coords.longitude);
 }
 
+//set default jakarta
 function error(){
-    alert('POSISI TIDAK DAPAT DIAKSES');
+    prayerTimes('-6.200000', '106.816666');
 }
 
 function userLocation(){
