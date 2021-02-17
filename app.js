@@ -1,15 +1,17 @@
 function success(position){
-    console.log.(position);
+    console.log(position);
 }
 
-function errpr(){
-    alert('Posisi Tidak Dapat Diakses')
+function error(){
+    alert('POSISI TIDAK DAPAT DIAKSES');
 }
-function userlocation(){
-    if(navigator.geolocation){
-        alert('Geolocation Tidak Didukung');
-    } else
-    navigator.geolocation.getCurrentPosition(success, error);
+
+function userLocation(){
+    if(!navigator.geolocation){
+        alert('GEOLOCATION TIDAK DIDUKUNG');
+    } else {
+        navigator.geolocation.getCurrentPosition(success, error);
+    }
 }
 
 function index(){
@@ -18,6 +20,6 @@ function index(){
     h3.innerHTML = 'Prayer Times';
 
     app.appendChild(h3);
-    userlocation();
+    userLocation();
 }
-    index();
+index();
